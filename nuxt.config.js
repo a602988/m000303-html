@@ -33,11 +33,20 @@ export default {
   css: [
   ],
   /*
+  ** i18n
+  */
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/about', '/en', '/en/about']
+  },
+  /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
-  ],
+
+  plugins: ['~/plugins/i18n.js'],
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components

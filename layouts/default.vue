@@ -1,123 +1,106 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-mian>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-mian>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+  <v-app>
+    <header class="Header">
+      <div class="container">
+        <h1 class="Header__Title">
+          Nuxt i18n
+        </h1>
+        <nav class="Header__Menu">
+          <NuxtLink :to="$i18n.path('')" class="Header__Link" exact>
+            {{ $t('links.home') }}
+          </NuxtLink>
+          <NuxtLink :to="$i18n.path('about')" class="Header__Link" exact>
+            {{ $t('links.about') }}
+          </NuxtLink>
+          <NuxtLink v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" class="Header__Link" active-class="none" exact>
+            {{ $t('links.french') }}
+          </NuxtLink>
+          <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
+            {{ $t('links.english') }}
+          </NuxtLink>
+        </nav>
+      </div>
+    </header>
+    <Nuxt />
     <v-footer padless
-      :absolute="fixed"
-      :class="`d-flex justify-space-around`"
-      color="white"
-      app
+    :absolute="fixed"
+    :class="`d-flex justify-space-around`"
+    color="white"
+    app
     >
       <a href="">a</a>
       <a href="">a</a>
       <a href="">a</a>
       <a href="">a</a>
     </v-footer>
-
   </v-app>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'vwin'
-    }
-  }
-}
+  export default {}
 </script>
+
+<style>
+  *, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    background-color: #fff;
+    color: #2e2f30;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .Header {
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    background-color: #2e2f30;
+  }
+  .Header__Title {
+    float: left;
+    font-weight: 300;
+    font-size: 30px;
+  }
+  .Header__Menu {
+    float: right;
+  }
+  .Header__Link {
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  .Header__Link:hover {
+    color: #2e2f30;
+    background-color: #fff;
+  }
+  .nuxt-link-active {
+    color: cyan;
+  }
+  .Content {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .Content__Title {
+    font-weight: 300;
+    padding-bottom: 30px;
+  }
+</style>
