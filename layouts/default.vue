@@ -12,6 +12,9 @@
           <NuxtLink :to="$i18n.path('about')" class="Header__Link" exact>
             {{ $t('links.about') }}
           </NuxtLink>
+          <NuxtLink :to="$i18n.path('users')" class="Header__Link" exact>
+            {{ $t('links.users') }}
+          </NuxtLink>
           <NuxtLink v-if="$i18n.locale === 'tw'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
             {{ $t('links.english') }}
           </NuxtLink>
@@ -102,4 +105,6 @@
     font-weight: 300;
     padding-bottom: 30px;
   }
+
+
 </style>

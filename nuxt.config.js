@@ -30,8 +30,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/main.scss'],
   /*
   ** i18n
   */
@@ -39,7 +38,14 @@ export default {
     middleware: 'i18n'
   },
   generate: {
-    routes: ['/', '/about', '/en', '/en/about']
+    routes: [
+      '/',
+      '/about',
+      '/en',
+      '/en/about',
+      '/users',
+      '/en/users',
+    ]
   },
   /*
   ** Plugins to load before mounting the App
