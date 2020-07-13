@@ -2,8 +2,8 @@
   "links": {
     "home": "Accueil",
     "about": "À propos",
-    "english": "Version Anglaise",
-    "tw": "Version Française"
+    "english": "English",
+    "tw": "繁體中文"
   },
   "home": {
     "title": "Bienvenue",

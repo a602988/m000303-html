@@ -12,26 +12,25 @@
           <NuxtLink :to="$i18n.path('about')" class="Header__Link" exact>
             {{ $t('links.about') }}
           </NuxtLink>
-          <NuxtLink v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" class="Header__Link" active-class="none" exact>
-            {{ $t('links.french') }}
+          <NuxtLink v-if="$i18n.locale === 'tw'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
+            {{ $t('links.english') }}
           </NuxtLink>
           <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
-            {{ $t('links.english') }}
+            {{ $t('links.tw') }}
           </NuxtLink>
         </nav>
       </div>
     </header>
     <Nuxt />
     <v-footer padless
-    :absolute="fixed"
     :class="`d-flex justify-space-around`"
     color="white"
     app
     >
-      <a href="">a</a>
-      <a href="">a</a>
-      <a href="">a</a>
-      <a href="">a</a>
+      <a href="">首頁</a>
+      <a href="">優惠</a>
+      <a href="">客服</a>
+      <a href="">我的</a>
     </v-footer>
   </v-app>
 </template>
