@@ -30,10 +30,18 @@
     color="white"
     app
     >
-      <a href="">首頁</a>
-      <a href="">優惠</a>
-      <a href="">客服</a>
-      <a href="">我的</a>
+      <NuxtLink :to="$i18n.path('')" class="footer_link" exact>
+        {{ $t('footer-link.home') }}
+      </NuxtLink>
+      <NuxtLink :to="$i18n.path('coupon')" class="footer_link" exact>
+        {{ $t('footer-link.coupon') }}
+      </NuxtLink>
+      <NuxtLink :to="$i18n.path('service')" class="footer_link" exact>
+        {{ $t('footer-link.service') }}
+      </NuxtLink>
+      <NuxtLink :to="$i18n.path('my')" class="footer_link" exact>
+        {{ $t('footer-link.my') }}
+      </NuxtLink>
     </v-footer>
   </v-app>
 </template>
@@ -43,20 +51,7 @@
 </script>
 
 <style>
-  *, *:before, *:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  html, body {
-    background-color: #fff;
-    color: #2e2f30;
-    letter-spacing: 0.5px;
-    font-size: 18px;
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    height: 100vh;
-    margin: 0;
-  }
+
   .container {
     width: 75%;
     margin: 0 auto;
@@ -94,17 +89,7 @@
     color: #2e2f30;
     background-color: #fff;
   }
-  .nuxt-link-active {
-    color: cyan;
-  }
-  .Content {
-    padding: 50px 0;
-    text-align: center;
-  }
-  .Content__Title {
-    font-weight: 300;
-    padding-bottom: 30px;
-  }
+
 
 
 </style>

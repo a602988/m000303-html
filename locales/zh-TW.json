@@ -14,9 +14,9 @@
     "introduction": "這是關於我們頁面."
   },
   "footer-link": {
-    "home": "關於我們",
-    "discount": "這是關於我們頁面.",
-    "service": "這是關於我們頁面.",
-    "my": "這是關於我們頁面."
+    "home": "首頁",
+    "coupon": "優惠",
+    "service": "客服",
+    "my": "我的"
   }
 }

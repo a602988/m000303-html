@@ -12,5 +12,11 @@
   "about": {
     "title": "About",
     "introduction": "This page is made to give you more informations."
+  },
+  "footer-link": {
+    "home": "HOME",
+    "coupon": "COUPON",
+    "service": "SERVICE",
+    "my": "MY"
   }
 }

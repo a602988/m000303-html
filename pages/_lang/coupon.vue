@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>About page</h1>
+    <h1>Counpon page</h1>
     <NuxtLink to="/">
       Home page
     </NuxtLink>

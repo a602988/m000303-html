@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <h1>Home page</h1>
+    <h1>my page</h1>
     <p>
       <NuxtLink to="/about">
-        About page
+        about page
       </NuxtLink>
     </p>
     <p>
