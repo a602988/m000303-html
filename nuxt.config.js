@@ -1,5 +1,4 @@
 import colors from 'vuetify/es5/util/colors'
-
 export default {
   /*
   ** Nuxt rendering mode
@@ -30,7 +29,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: ['~/assets/main.scss'],
+  css: [
+    '~/assets/main.scss',
+  ],
   /*
   ** i18n
   */
@@ -52,7 +53,12 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
 
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js',
+    {
+      src: '~/plugins/font-awesome'
+    }
+  ],
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components

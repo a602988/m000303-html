@@ -3,7 +3,7 @@
     <header class="Header">
       <div class="container">
         <h1 class="Header__Title">
-          Nuxt i18n
+          <logo />
         </h1>
         <nav class="Header__Menu">
           <NuxtLink :to="$i18n.path('')" class="Header__Link" exact>
@@ -13,7 +13,7 @@
             {{ $t('links.about') }}
           </NuxtLink>
           <NuxtLink :to="$i18n.path('users')" class="Header__Link" exact>
-            {{ $t('links.users') }}
+            user
           </NuxtLink>
           <NuxtLink v-if="$i18n.locale === 'tw'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
             {{ $t('links.english') }}
@@ -26,28 +26,37 @@
     </header>
     <Nuxt />
     <v-footer padless
-    :class="`d-flex justify-space-around`"
-    color="white"
-    app
+              :class="`d-flex justify-space-around`"
+              color="white"
+              app
     >
-      <NuxtLink :to="$i18n.path('')" class="footer_link" exact>
+
+      <NuxtLink :to="$i18n.path('')" class="footer_link inline-block text-center text-decoration-none grey--text text--darken-1" exact>
+        <i class="far fa-home-alt d-block fa-2x"></i>
         {{ $t('footer-link.home') }}
       </NuxtLink>
-      <NuxtLink :to="$i18n.path('coupon')" class="footer_link" exact>
+      <NuxtLink :to="$i18n.path('coupon')" class="footer_link inline-block" exact>
         {{ $t('footer-link.coupon') }}
       </NuxtLink>
-      <NuxtLink :to="$i18n.path('service')" class="footer_link" exact>
+      <NuxtLink :to="$i18n.path('service')" class="footer_link inline-block" exact>
         {{ $t('footer-link.service') }}
       </NuxtLink>
-      <NuxtLink :to="$i18n.path('my')" class="footer_link" exact>
+      <NuxtLink :to="$i18n.path('my')" class="footer_link inline-block" exact>
         {{ $t('footer-link.my') }}
       </NuxtLink>
     </v-footer>
+
+
   </v-app>
 </template>
 
 <script>
-  export default {}
+  import Logo from '~/components/Logo.vue'
+  export default {
+    components: {
+      Logo,
+    }
+  }
 </script>
 
 <style>
