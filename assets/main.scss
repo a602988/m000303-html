@@ -41,3 +41,14 @@ body {
   opacity: 0;
   transform: translate(-30px, 0);
 }
+/* default style */
+
+/* icon bg */
+.bg-gradient{
+  background: linear-gradient(#55A4FD,#507EFE);
+}
+
+/* top nav */
+.top-right-btn.active:before{
+  
+}
