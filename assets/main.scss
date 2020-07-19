@@ -49,6 +49,22 @@ body {
 }
 
 /* top nav */
-.top-right-btn.active:before{
-  
+.m-top-right-btn{
+  position: relative;
+  width: 26px !important;
+  height: 26px !important;
+
 }
+.m-top-right-btn.active::after{
+  display: inline-block;
+  position:absolute;
+  content: '';
+  top:0px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  background-color: orangered;
+  border-radius: 100%;
+
+}
+
