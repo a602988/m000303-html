@@ -1,6 +1,5 @@
 <template>
     <v-bottom-navigation
-      :value="activeBtn"
       grow
       color="blue lighten-1"
       class="footer-nav"
@@ -25,9 +24,9 @@
 </template>
 
 <style>
-  .footer-nav .theme--light.v-btn:hover::before{
-    opacity: 0;
-  }
+  /*.footer-nav .theme--light.v-btn:hover::before{*/
+  /*  opacity: 0;*/
+  /*}*/
   .footer-nav{
     box-shadow:none !important;
     border-top: 1px solid #F5F5F5;

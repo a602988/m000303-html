@@ -10,10 +10,10 @@
       >
         <v-toolbar-title><logo /></v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn class="m-top-right-btn  bg-gradient mx-1" fab dark x-small elevation="0">
+        <v-btn class="m-icon-c  bg-gradient mx-1" fab dark x-small elevation="0">
           <v-icon small>fas fa-heart</v-icon>
         </v-btn>
-        <v-btn class="m-top-right-btn active bg-gradient mx-1" fab dark x-small elevation="0">
+        <v-btn class="m-icon-c active bg-gradient mx-1" fab dark x-small elevation="0">
           <v-icon small dense>fas fa-comment-alt-dots</v-icon>
         </v-btn>
       </v-app-bar>
@@ -35,15 +35,10 @@
   export default {
     components: {
       Logo,
-      NavFooter
+      NavFooter,
     }
   }
 
+
+
 </script>
-
-<style>
-
-
-
-
-</style>

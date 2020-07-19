@@ -49,13 +49,18 @@ body {
 }
 
 /* top nav */
-.m-top-right-btn{
+.m-icon-c{
   position: relative;
   width: 26px !important;
   height: 26px !important;
 
+  i{
+    line-height: 26px !important;
+    overflow: hidden;
+  }
+
 }
-.m-top-right-btn.active::after{
+.m-icon-c.active::after{
   display: inline-block;
   position:absolute;
   content: '';
@@ -68,3 +73,16 @@ body {
 
 }
 
+/* index banner */
+
+@media screen and (orientation: landscape) {
+  .banner-list{
+      height:50vh !important;
+      & > div{
+        height: 100%!important;
+      }
+  }
+ .banner-item > div{
+      height:100% !important;
+  }
+}
