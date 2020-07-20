@@ -1,3 +1,5 @@
+
+@import '~vuetify/src/styles/settings/_variables';
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
@@ -41,14 +43,22 @@ body {
   opacity: 0;
   transform: translate(-30px, 0);
 }
+
+
+
 /* default style */
+/* pic */
+.max-pic{
+  max-height: 100%;
+  max-width: 100%;
+}
 
 /* icon bg */
 .bg-gradient{
   background: linear-gradient(#55A4FD,#507EFE);
 }
 
-/* top nav */
+/* icon */
 .m-icon-c{
   position: relative;
   width: 26px !important;
@@ -73,7 +83,14 @@ body {
 
 }
 
-/* index banner */
+/* [ layouts ]  footer */
+
+.footer-nav{
+  box-shadow:none !important;
+  border-top: 1px solid #F5F5F5;
+}
+
+/* [ index ]  banner */
 
 @media screen and (orientation: landscape) {
   .banner-list{
@@ -84,5 +101,25 @@ body {
   }
  .banner-item > div{
       height:100% !important;
+  }
+}
+
+/* [ index ] marquee-list */
+.marquee-list{
+  box-shadow: 0px 6px 5px -3px #E8E8E8;
+}
+
+/* [ index ] index-icon-link */
+.m-sm-flex-box{
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+  }
+}
+.index-icon-link .pic{
+  height: 35px;
+  img{
+    margin-bottom: 5px;
   }
 }

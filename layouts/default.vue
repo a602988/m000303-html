@@ -4,7 +4,7 @@
       <v-app-bar
         color="blue lighten-3"
         dense
-        src="/images/topbg.jpg"
+        src="images/topbg.jpg"
         elevation="0"
         height="45"
       >

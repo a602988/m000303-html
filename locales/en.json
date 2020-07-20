@@ -18,5 +18,13 @@
     "coupon": "COUPON",
     "service": "SERVICE",
     "my": "MY"
+  },
+  "index": {
+    "login-box": "Welcome,VIP",
+    "login-box-btn": "Login",
+    "login-box-deposit": "Deposit",
+    "login-box-withdrawal": "Withdrawal",
+    "login-box-transfer": "Transfer",
+    "login-box-vip": "VIP"
   }
 }

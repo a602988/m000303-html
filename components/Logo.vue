@@ -2,7 +2,7 @@
   <img
     class="logo mt-2"
     alt="VWin 德贏"
-    src="/images/logo.png"
+    src="~/assets/images/logo.png"
   >
 </template>
 

@@ -18,5 +18,14 @@
     "coupon": "優惠",
     "service": "客服",
     "my": "我的"
+  },
+  "index": {
+    "login-box": "歡迎您，親愛的貴賓",
+    "login-box-btn": "會員登入",
+    "login-box-deposit": "存款",
+    "login-box-withdrawal": "提款",
+    "login-box-transfer": "轉帳",
+    "login-box-vip": "VIP"
+
   }
 }
