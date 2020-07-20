@@ -47,6 +47,14 @@ body {
 
 
 /* default style */
+
+.m-sm-flex-box{
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+  }
+}
 /* pic */
 .max-pic{
   max-height: 100%;
@@ -110,16 +118,12 @@ body {
 }
 
 /* [ index ] index-icon-link */
-.m-sm-flex-box{
-  @media #{map-get($display-breakpoints, 'sm-and-up')} {
-    display:  flex;
-    align-items: center;
-    justify-content:  center;
-  }
-}
-.index-icon-link .pic{
-  height: 35px;
-  img{
-    margin-bottom: 5px;
+
+.index-icon-link {
+  .pic{
+    height: 35px;
+    img{
+      margin-bottom: 5px;
+    }
   }
 }

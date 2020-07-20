@@ -54,7 +54,7 @@
                 <div class="pic">
                   <img src="~/assets/images/index-btn3.png" class="max-pic">
                 </div>
-                <div class="d-block text-body-2"> {{ $t('index.login-box-deposit')}}</div>
+                <div class="d-block text-body-2"> {{ $t('index.login-box-transfer')}}</div>
               </button>
             </v-col>
             <v-col cols="3">
@@ -62,7 +62,7 @@
                 <div class="pic">
                   <img src="~/assets/images/index-btn4.png" class="max-pic">
                 </div>
-                <div class="d-block text-body-2"> {{ $t('index.login-box-deposit')}}</div>
+                <div class="d-block text-body-2"> {{ $t('index.login-box-vip')}}</div>
               </button>
             </v-col>
           </v-row >
