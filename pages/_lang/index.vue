@@ -2,11 +2,11 @@
 
   <div>
     <Carousels />
-    <div class="py-1 px-2 marquee-list">
+    <div class="py-1 px-2 m-index-marquee">
       <v-row no-gutters align="center">
         <v-col cols="auto">
           <v-responsive
-            class="text-center grey lighten-2 rounded-circle d-inline-flex align-center justify-center ma-1 bg-gradient m-icon-c"
+            class="text-center grey lighten-2 rounded-circle d-inline-flex align-center justify-center ma-1 m-gradient m-icon-c"
             height="25"
             width="25"
           >
@@ -17,13 +17,13 @@
           <p class="text-body-2 text-truncate mb-0 grey--text text--darken-1">{{msg}}</p>
         </v-col>
         <v-col cols="auto ml-1">
-          <span class="d-block rounded-l-xl  blue lighten-1 px-2 py-1 white--text text-body-2"> {{msgClass}} </span>
+          <span class="d-block rounded-l-xl  indigo px-2 py-1 white--text text-body-2"> {{msgClass}} </span>
         </v-col>
       </v-row>
     </div>
-    <div id="login-box" class="py-3 px-2">
-      <v-row no-gutters align="center">
-        <v-col cols="auto">
+    <div  class="py-3 px-2">
+      <v-row no-gutters align="center" >
+        <v-col cols="auto" class="m-login-box">
           <div class="m-sm-flex-box">
             <p class="mb-0 text-body-2 px-1">{{ $t('index.login-box')}}</p>
             <v-btn class="ma-2 blue--text text--darken-2" rounded  elevation="0" color="#eee">
@@ -31,7 +31,7 @@
             </v-btn>
           </div>
         </v-col>
-        <v-col class="text-right index-icon-link ml-3 ml-sm-5">
+        <v-col class="m-index-quick-link text-right k ml-3 ml-sm-5">
           <v-row no-gutters>
             <v-col cols="3">
               <button class="ml-2 blue--text text--darken-2 m-sm-flex-box float-right">
@@ -69,6 +69,7 @@
         </v-col>
       </v-row>
     </div>
+    <h1>test</h1>
       <NuxtLink to="/about">
         About page
       </NuxtLink>

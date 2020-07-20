@@ -1,5 +1,5 @@
 
-@import '~vuetify/src/styles/settings/_variables';
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
@@ -46,28 +46,30 @@ body {
 
 
 
-/* default style */
+/* --------------------------
+  共用
+---------------------------*/
 
 .m-sm-flex-box{
-  @media #{map-get($display-breakpoints, 'sm-and-up')} {
-    display:  flex;
-    align-items: center;
-    justify-content:  center;
-  }
+  //@media #{map-get($display-breakpoints, 'sm-and-up')} {
+  //  display:  flex;
+  //  align-items: center;
+  //  justify-content:  center;
+  //}
 }
-/* pic */
+
 .max-pic{
   max-height: 100%;
   max-width: 100%;
 }
 
-/* icon bg */
-.bg-gradient{
+
+.m-gradient{/* 預設背景 */
   background: linear-gradient(#55A4FD,#507EFE);
 }
 
-/* icon */
-.m-icon-c{
+
+.m-icon-c{/* 小 icon */
   position: relative;
   width: 26px !important;
   height: 26px !important;
@@ -90,36 +92,36 @@ body {
   border-radius: 100%;
 
 }
-
-/* [ layouts ]  footer */
-
-.footer-nav{
+/* --------------------------
+  Layouts
+---------------------------*/
+.m-footer-nav{
   box-shadow:none !important;
   border-top: 1px solid #F5F5F5;
 }
 
-/* [ index ]  banner */
+/* --------------------------
+  Index
+---------------------------*/
 
 @media screen and (orientation: landscape) {
-  .banner-list{
+  .m-index-banner{
       height:50vh !important;
       & > div{
         height: 100%!important;
       }
   }
- .banner-item > div{
+ .list-item > div{
       height:100% !important;
   }
 }
 
-/* [ index ] marquee-list */
-.marquee-list{
+
+.m-index-marquee{
   box-shadow: 0px 6px 5px -3px #E8E8E8;
 }
 
-/* [ index ] index-icon-link */
-
-.index-icon-link {
+.m-index-quick-link{
   .pic{
     height: 35px;
     img{

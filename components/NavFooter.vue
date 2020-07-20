@@ -2,7 +2,7 @@
     <v-bottom-navigation
       grow
       color="blue lighten-1"
-      class="footer-nav"
+      class="m-footer-nav"
     >
       <v-btn  :to="$i18n.path('')">
         <span>{{ $t('footer-link.home') }}</span>

@@ -1,10 +1,10 @@
 <template>
-  <v-carousel hide-delimiters cycle show-arrows-on-hover height="20vh" class="banner-list">
+  <v-carousel hide-delimiters cycle show-arrows-on-hover height="20vh" class="m-index-banner">
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
-      class="banner-item"
+      class="list-item"
     ></v-carousel-item>
   </v-carousel>
 </template>
