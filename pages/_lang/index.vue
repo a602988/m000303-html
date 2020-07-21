@@ -14,7 +14,7 @@
           </v-responsive>
         </v-col>
         <v-col class="overflow-hidden">
-          <p class="text-body-2 text-truncate mb-0 grey--text text--darken-1">{{msg}}</p>
+          <Marquee />
         </v-col>
         <v-col cols="auto ml-1">
           <span class="d-block rounded-l-xl  indigo px-2 py-1 white--text text-body-2"> {{msgClass}} </span>
@@ -80,9 +80,11 @@
 </template>
 <script>
   import Carousels from '~/components/Carousels.vue'
+  import Marquee from '~/components/Marquee.vue'
   export default {
     components: {
-      Carousels
+      Carousels,
+      Marquee,
     },
     data(){
       return {
