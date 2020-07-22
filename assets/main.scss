@@ -48,8 +48,8 @@
    [ default ]
 ----------------------------------------- */
 
-.m-sm-flex-box{
-  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+@media #{map-get($display-breakpoints, 'sm-and-up')} {
+  .m-sm-flex-box{
     display:  flex;
     align-items: center;
     justify-content:  center;
