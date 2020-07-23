@@ -40,7 +40,7 @@
         <v-col class="m-index-quick-link text-right k ml-3 ml-sm-5">
           <v-row no-gutters>
             <v-col cols="3">
-              <button class="ml-2 blue--text text--darken-2 m-sm-flex-box float-right"  @click="getInfo">
+              <button class="ml-2 blue--text text--darken-2 m-sm-flex-box float-right">
                 <div class="pic d-sm-inline-block">
                   <img src="~/assets/images/index-btn1.png" class="max-pic">
                 </div>
@@ -107,9 +107,7 @@
     },
     methods:{
       getInfo(){
-        this.$http.get('http://vue.studyit.io/api/getlunbo').then(function(result){
-          console.log(result)
-        })
+
       }
     }
   }
