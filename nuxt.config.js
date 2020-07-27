@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -58,7 +59,7 @@ export default {
     '~/plugins/i18n.js',
     {
       src: '~/plugins/font-awesome'
-    }
+    },
   ],
   /*
   ** Auto import components
@@ -77,21 +78,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
   ],
-  axios: {
-    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
-  },
 
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
-    }
-  },
-
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL
-    }
-  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -120,3 +107,4 @@ export default {
   build: {
   }
 }
+

@@ -10,9 +10,9 @@
             <v-icon small dark>fas fa-volume</v-icon>
           </div>
         </v-col>
-        <v-col class="overflow-hidden">
-          <marquee-text>
-            <span  v-for="(marqueeText,i) in marqueeTexts"><a v-bind:href="marqueeText.url" >{{marqueeText.subject}}</a></span>
+        <v-col class="overflow-hidden m-text">
+          <marquee-text :repeat="3" :duration="40">
+           <a v-bind:href="marqueeText.url"  v-for="(marqueeText,i) in marqueeTexts">{{marqueeText.subject}}</a>
           </marquee-text>
         </v-col>
         <v-col cols="auto ml-1 m-type">
@@ -84,7 +84,6 @@
 <script>
   import Carousels from '~/components/Carousels.vue'
   import MarqueeText from '~/components/vue-marquee-text-component/vue-marquee-text-component.vue'
-
   // 跑馬燈文字
   // const dataMarquee = [
   //   { id: 1, title:'首存滿千送500現金,指定經銷介紹好友再領588現金', url:''},
@@ -94,7 +93,7 @@
   export default {
     components: {
       Carousels,
-      MarqueeText
+      MarqueeText,
     },
     data(){
       return {
@@ -113,16 +112,12 @@
           var response = response.data;
           if(response.success === true){
             this.marqueeTexts = response.data
-            console.log(1)
           }else {
             console.log('獲取數據失敗')
           }
         });
       },
       getInfo(){
-        // const api = 'http://localhost:3000/data/marquee.json';
-        // this.$axios.get(api).then(response => (this.marqueeTexts = JSON.stringify(response.data)));
-        // console.log(this.marqueeTexts);
 
       },
       postInfo(){
