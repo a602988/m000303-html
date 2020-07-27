@@ -2,26 +2,21 @@
 
   <div>
     <Carousels />
+    <!-- marquee -->
     <div class="py-1 px-2 m-index-marquee">
-      <!-- marquee -->
       <v-row no-gutters align="center">
         <v-col cols="auto">
-          <v-responsive
-            class="text-center grey lighten-2 rounded-circle d-inline-flex align-center justify-center ma-1 m-gradient m-icon-c"
-            height="25"
-            width="25"
-          >
+          <div class="text-center grey lighten-2 rounded-circle d-inline-flex align-center justify-center  m-gradient m-icon-c">
             <v-icon small dark>fas fa-volume</v-icon>
-          </v-responsive>
+          </div>
         </v-col>
-
         <v-col class="overflow-hidden">
           <marquee-text>
-            <span  v-for="(marqueeText,i) in marqueeTexts"><a @href="marqueeText.url" >{{marqueeText.title}}</a></span>
+            <span  v-for="(marqueeText,i) in marqueeTexts"><a v-bind:href="marqueeText.url" >{{marqueeText.subject}}</a></span>
           </marquee-text>
         </v-col>
-        <v-col cols="auto ml-1">
-          <span class="d-block rounded-l-xl  indigo px-2 py-1 white--text text-body-2"> {{msgClass}} </span>
+        <v-col cols="auto ml-1 m-type">
+          <span class="d-inline-block rounded-l-xl  indigo px-2 white--text"><v-icon dark>fas fa-trophy-alt</v-icon> {{msgClass}} </span>
         </v-col>
       </v-row>
     </div>
@@ -76,6 +71,8 @@
       </v-row>
     </div>
     <h1>test</h1>
+      <v-btn small color="primary" @click="getInfo()">get</v-btn>
+     <v-btn small color="primary" @click="postInfo()">post</v-btn>
       <NuxtLink to="/about">
         About page
       </NuxtLink>
@@ -89,10 +86,10 @@
   import MarqueeText from '~/components/vue-marquee-text-component/vue-marquee-text-component.vue'
 
   // 跑馬燈文字
-  const dataMarquee = [
-    { id: 1, title:'首存滿千送500現金,指定經銷介紹好友再領588現金', url:''},
-    { id: 2, title:'今天的例行維護作業完畢 遊戲皆可以正常運行了。 請清除暫存在登入遊戲~謝謝', url:''},
-  ]
+  // const dataMarquee = [
+  //   { id: 1, title:'首存滿千送500現金,指定經銷介紹好友再領588現金', url:''},
+  //   { id: 2, title:'今天的例行維護作業完畢 遊戲皆可以正常運行了。 請清除暫存在登入遊戲~謝謝', url:''},
+  // ]
 
   export default {
     components: {
@@ -102,16 +99,41 @@
     data(){
       return {
         msgClass:'熱門賽事',
-        marqueeTexts: dataMarquee
+        marqueeTexts: null,
+        info:null
       }
     },
+    created() {
+      this.marqueeList()
+    },
     methods:{
+      marqueeList(){
+        const api = 'http://localhost:3000/data/marquee.json';
+        this.$axios.get(api).then(response =>{
+          var response = response.data;
+          if(response.success === true){
+            this.marqueeTexts = response.data
+            console.log(1)
+          }else {
+            console.log('獲取數據失敗')
+          }
+        });
+      },
       getInfo(){
+        // const api = 'http://localhost:3000/data/marquee.json';
+        // this.$axios.get(api).then(response => (this.marqueeTexts = JSON.stringify(response.data)));
+        // console.log(this.marqueeTexts);
 
+      },
+      postInfo(){
+        this.$axios.post('',{},{}).then(result =>{
+
+        })
       }
     }
   }
 
+  //https://lhbetex-api.ifun18.com/api-v1/site/get-bulletin
 
 </script>
 
