@@ -12,11 +12,16 @@
         </v-col>
         <v-col class="overflow-hidden m-text">
           <marquee-text :repeat="3" :duration="40">
-           <a v-bind:href="marqueeText.url"  v-for="(marqueeText,i) in marqueeTexts">{{marqueeText.subject}}</a>
+           <a v-bind:href="marqueeText.url"  v-for="(marqueeText,i) in marqueeTexts">
+             <span v-if="$i18n.locale === 'tw'">{{marqueeText.subject}}</span>
+             <span v-if="$i18n.locale === 'en'">{{marqueeText.subject_eng}}</span>
+           </a>
           </marquee-text>
         </v-col>
         <v-col cols="auto ml-1 m-type">
-          <span class="d-inline-block rounded-l-xl  indigo px-2 white--text"><v-icon dark>fas fa-trophy-alt</v-icon> {{msgClass}} </span>
+          <div class="d-inline-block rounded-l-xl  indigo px-2 white--text">
+            <v-icon dark>fas fa-trophy-alt</v-icon>{{ $t('index.marquee-type')}}
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -91,6 +96,9 @@
   // ]
 
   export default {
+    head () {
+      return { title: this.$t('index.title') }
+    },
     components: {
       Carousels,
       MarqueeText,

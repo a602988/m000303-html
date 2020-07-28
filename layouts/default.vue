@@ -10,6 +10,12 @@
       >
         <v-toolbar-title><logo /></v-toolbar-title>
         <v-spacer></v-spacer>
+        <NuxtLink v-if="$i18n.locale === 'tw'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
+          {{ $t('links.english') }}
+        </NuxtLink>
+        <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
+          {{ $t('links.tw') }}
+        </NuxtLink>
         <v-btn class="m-icon-c  m-gradient mx-1" fab dark x-small elevation="0">
           <v-icon small>fas fa-heart</v-icon>
         </v-btn>

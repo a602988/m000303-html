@@ -4,11 +4,13 @@
 	{
 	  "type": "熱門賽事",
 	  "subject": "首存滿千送500現金,指定經銷介紹好友再領588現金",
+	  "subject_eng": "Free 500 cash for the first deposit of over 1,000, designated dealers to introduce friends and then receive 588 cash",
 	  "url": "/about"
 	},
 	{
 	  "type": "系統公告",
 	  "subject": "今天的例行維護作業完畢 遊戲皆可以正常運行了。 請清除暫存在登入遊戲~謝謝",
+	  "subject_eng": "Today's routine maintenance work is completed, the game can run normally. Please clear the temporary login game~Thank you",
 	  "url": "/conpon"
 	}
   ]

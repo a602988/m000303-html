@@ -3,7 +3,7 @@
     "home": "首頁",
     "about": "關於我們",
     "english": "English",
-    "tw": "繁體中文"
+    "tw": "繁體"
   },
   "home": {
     "title": "繁體",
@@ -20,12 +20,14 @@
     "my": "我的"
   },
   "index": {
+    "title": "VWin德贏",
     "login-box": "歡迎您，親愛的貴賓",
     "login-box-btn": "會員登入",
     "login-box-deposit": "存款",
     "login-box-withdrawal": "提款",
     "login-box-transfer": "轉帳",
-    "login-box-vip": "VIP"
+    "login-box-vip": "VIP",
+    "marquee-type": "熱門賽事"
 
   }
 }
