@@ -10,7 +10,7 @@
       >
         <v-toolbar-title><logo /></v-toolbar-title>
         <v-spacer></v-spacer>
-        <NuxtLink v-if="$i18n.locale === 'tw'" :to="`/en` + $route.fullPath" class="Header__Link" active-class="none" exact>
+        <NuxtLink v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')" class="Header__Link" active-class="none" exact>
           {{ $t('links.english') }}
         </NuxtLink>
         <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>

@@ -13,7 +13,7 @@
         <v-col class="overflow-hidden m-text">
           <marquee-text :repeat="3" :duration="40">
            <a v-bind:href="marqueeText.url"  v-for="(marqueeText,i) in marqueeTexts">
-             <span v-if="$i18n.locale === 'tw'">{{marqueeText.subject}}</span>
+             <span v-if="$i18n.locale === 'zh-Hant'">{{marqueeText.subject}}</span>
              <span v-if="$i18n.locale === 'en'">{{marqueeText.subject_eng}}</span>
            </a>
           </marquee-text>

@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import VueMeta from 'vue-meta'
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -23,6 +23,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: '' },
+      { hid: 'og:title', propety: 'og:title', content: '' },
+      { hid: 'og:url', propety: 'og:url', content: '' },
+      { hid: 'og:site_name', propety: 'og:site_name', content: '' },
+      { hid: 'og:description', propety: 'og:description', content: '' },
+      { hid: 'og:image', propety: 'og:image', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -33,13 +39,13 @@ export default {
   */
   css: [
     '~/assets/default.scss',
-    '~/assets/main.scss',
+    '~/assets/style.scss',
   ],
   /*
   ** i18n
   */
   router: {
-    middleware: 'i18n'
+    //middleware: 'i18n'
   },
   generate: {
     routes: [
@@ -57,7 +63,7 @@ export default {
   */
 
   plugins: [
-    '~/plugins/i18n.js',
+    //'~/plugins/i18n.js',
     {
       src: '~/plugins/font-awesome'
     },
@@ -78,8 +84,23 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    'nuxt-i18n'
   ],
-
+  i18n: {
+    locales: [
+      //'zh-Hant', 'en',
+      { code: 'zh-Hant', iso: 'zh-TW', langFile: 'zh-Hant.json' },
+      { code: 'en', iso: 'en-US', langFile: 'en.json' },
+    ],
+    defaultLocale: 'zh-Hant',
+    vueI18n: {
+      fallbackLocale: 'zh-Hant',
+      messages: {
+        'zh-Hant': require('./locales/zh-Hant.json'),
+        'en': require('./locales/en.json'),
+      }
+    },
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
