@@ -39,6 +39,14 @@
   import Logo from '~/components/Logo.vue'
   import NavFooter from '~/components/NavFooter.vue'
   export default {
+    head() {
+      return {
+        htmlAttrs: {
+          lang: this.$i18n.locale,
+          amp: true
+        },
+      }
+    },
     components: {
       Logo,
       NavFooter,

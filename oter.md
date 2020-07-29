@@ -1,40 +1,10 @@
 # m000303-html
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-# 製作規範
-
-1. 組件的樣式請直接方在組件內
-2. 頁面css請放置assets
-3. 
-
-
-# 常用筆記
-
-## css
-
-    @media screen and (orientation: landscape) {)
-    
     
 ## 跑資料與語系
 
-    // pages/_lang/index.vue
+// pages/_lang/index.vue
+    
     <marquee-text :repeat="3" :duration="40">
         <a v-bind:href="marqueeText.url"  v-for="(marqueeText,i) in marqueeTexts">
              <span v-if="$i18n.locale === 'tw'">{{marqueeText.subject}}</span>
@@ -74,8 +44,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
     
 資料內容 
+// pages/static/data/marquee.json
     
-    // pages/static/data/marquee.json
+    
     {
       "success": true,
       "data": [

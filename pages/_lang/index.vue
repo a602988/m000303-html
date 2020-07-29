@@ -89,15 +89,13 @@
 <script>
   import Carousels from '~/components/Carousels.vue'
   import MarqueeText from '~/components/vue-marquee-text-component/vue-marquee-text-component.vue'
-  // 跑馬燈文字
-  // const dataMarquee = [
-  //   { id: 1, title:'首存滿千送500現金,指定經銷介紹好友再領588現金', url:''},
-  //   { id: 2, title:'今天的例行維護作業完畢 遊戲皆可以正常運行了。 請清除暫存在登入遊戲~謝謝', url:''},
-  // ]
 
   export default {
     head () {
-      return { title: this.$t('index.title') }
+      return {
+        title: this.$t('index.title'),
+
+      }
     },
     components: {
       Carousels,
@@ -124,14 +122,6 @@
             console.log('獲取數據失敗')
           }
         });
-      },
-      getInfo(){
-
-      },
-      postInfo(){
-        this.$axios.post('',{},{}).then(result =>{
-
-        })
       }
     }
   }
