@@ -1,4 +1,14 @@
+<template>
+  <div class="container">
+    <h1>service page</h1>
+    <NuxtLink to="/">
+      Home page
+    </NuxtLink>
+  </div>
+</template>
+
 <script>
-  import Service from '~/pages/_lang/service'
-  export default Service
+  export default {
+
+  }
 </script>

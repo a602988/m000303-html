@@ -63,9 +63,9 @@ export default {
   */
 
   plugins: [
-    //'~/plugins/i18n.js',
     {
-      src: '~/plugins/font-awesome'
+      src: '~/plugins/font-awesome',
+      src: '~/plugins/i18n.js'
     },
   ],
   /*
@@ -88,20 +88,22 @@ export default {
   ],
   i18n: {
     locales: [
-      //'zh-Hant', 'en',
-      { code: 'zh-Hant', iso: 'zh-TW', langFile: 'zh-Hant.json' },
-      { code: 'en', iso: 'en-US', langFile: 'en.json' },
+      { code: 'zh-Hant',name: '繁體中文', iso: 'zh-TW', file: 'zh-Hant.json'},
+      { code: 'en',name: 'English', iso: 'en-US', file: 'en.json' },
     ],
+    seo: false,
+    lazy: true,
+    langDir: 'locales/',
     defaultLocale: 'zh-Hant',
     vueI18n: {
       fallbackLocale: 'zh-Hant',
-      messages: {
-        'zh-Hant': require('./locales/zh-Hant.json'),
-        'en': require('./locales/en.json'),
-      }
+    },
+    detectBrowserLanguage: {//檢測用戶的瀏覽器語言來將用戶重定向到其首選語言
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
     },
   },
-  /*
+  /*json
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */

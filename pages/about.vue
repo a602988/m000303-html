@@ -1,4 +1,14 @@
+<template>
+  <div class="container">
+    <h1>About page</h1>
+    <NuxtLink to="/">
+      Home page
+    </NuxtLink>
+  </div>
+</template>
+
 <script>
-  import About from '~/pages/_lang/about'
-  export default About
+  export default {
+
+  }
 </script>

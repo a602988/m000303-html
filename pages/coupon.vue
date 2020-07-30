@@ -1,4 +1,14 @@
+<template>
+  <div class="container">
+    <h1>Counpon page</h1>
+    <NuxtLink to="/">
+      Home page
+    </NuxtLink>
+  </div>
+</template>
+
 <script>
-  import Coupon from '~/pages/_lang/coupon'
-  export default Coupon
+  export default {
+
+  }
 </script>

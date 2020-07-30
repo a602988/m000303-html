@@ -10,12 +10,12 @@
       >
         <v-toolbar-title><logo /></v-toolbar-title>
         <v-spacer></v-spacer>
-        <NuxtLink v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')" class="Header__Link" active-class="none" exact>
-          {{ $t('links.english') }}
-        </NuxtLink>
-        <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="Header__Link" active-class="none" exact>
-          {{ $t('links.tw') }}
-        </NuxtLink>
+
+        <nuxt-link
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)">{{ locale.name }}
+        </nuxt-link>
         <v-btn class="m-icon-c  m-gradient mx-1" fab dark x-small elevation="0">
           <v-icon small>fas fa-heart</v-icon>
         </v-btn>
@@ -50,6 +50,11 @@
     components: {
       Logo,
       NavFooter,
+    },
+    computed: {
+      availableLocales () {
+        return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+      }
     }
   }
 
