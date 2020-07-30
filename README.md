@@ -16,6 +16,7 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+//https://lhbetex-api.ifun18.com/api-v1/site/get-bulletin
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 # 製作規範
@@ -31,6 +32,21 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
     @media screen and (orientation: landscape) {)
     
+    @media #{map-get($display-breakpoints, 'sm-and-down')} {
+          height: 25px;
+        }
+        
+    @media #{map-get($display-breakpoints, 'sm-and-up')} {
+          
+          }
+          
+    @media #{map-get($display-breakpoints, 'xs-only')} {
+        height: 25px;
+      }
+      
+      &:lang(en-US){
+            
+       }
     
 ## 跑資料與語系
 

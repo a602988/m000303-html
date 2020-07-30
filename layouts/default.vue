@@ -26,9 +26,9 @@
     </div>
     <Nuxt />
     <v-footer padless
-        :class="`d-flex justify-space-around`"
-        color="white"
-        app
+              :class="`d-flex justify-space-around`"
+              color="white"
+              app
     >
       <NavFooter/>
     </v-footer>
@@ -43,7 +43,7 @@
       return {
         htmlAttrs: {
           lang: this.$i18n.locale,
-          amp: true
+          amp: true,
         },
       }
     },
@@ -61,7 +61,3 @@
 
 
 </script>
-
-<style lang="scss">
-
-</style>

@@ -16,19 +16,13 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    //titleTemplate: '%s - ' + process.env.npm_package_name,
-    titleTemplate: '%s - ' + 'VWin',
+    titleTemplate: '%s - ' + process.env.npm_package_name,
+    //titleTemplate: '%s - ' + 'VWin',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'description', name: 'description', content: '' },
-      { hid: 'og:title', propety: 'og:title', content: '' },
-      { hid: 'og:url', propety: 'og:url', content: '' },
-      { hid: 'og:site_name', propety: 'og:site_name', content: '' },
-      { hid: 'og:description', propety: 'og:description', content: '' },
-      { hid: 'og:image', propety: 'og:image', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -65,7 +59,7 @@ export default {
   plugins: [
     {
       src: '~/plugins/font-awesome',
-      src: '~/plugins/i18n.js'
+      //src: '~/plugins/i18n.js'
     },
   ],
   /*
@@ -79,6 +73,11 @@ export default {
   buildModules: [
     '@nuxtjs/vuetify',
   ],
+  styleResources: {
+    scss: [
+      '~/assets/variables.scss'
+    ]
+  },
   /*
   ** Nuxt.js modules
   */
@@ -87,11 +86,12 @@ export default {
     'nuxt-i18n'
   ],
   i18n: {
+    baseUrl: 'http://localhost:3000/',
     locales: [
-      { code: 'zh-Hant',name: '繁體中文', iso: 'zh-TW', file: 'zh-Hant.json'},
-      { code: 'en',name: 'English', iso: 'en-US', file: 'en.json' },
+      { code: 'zh-Hant',name:'繁體中文', iso: 'zh-Hant', file: 'zh-Hant.json'},
+      { code: 'en',name:'English', iso: 'en-US', file: 'en.json' },
     ],
-    seo: false,
+    seo: true,
     lazy: true,
     langDir: 'locales/',
     defaultLocale: 'zh-Hant',

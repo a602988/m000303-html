@@ -21,12 +21,12 @@
   },
   "index": {
     "title": "Home",
-    "login-box": "Welcome,VIP",
+    "login-box": "Welcome Dear",
     "login-box-btn": "Login",
     "login-box-deposit": "Deposit",
     "login-box-withdrawal": "Withdrawal",
     "login-box-transfer": "Transfer",
     "login-box-vip": "VIP",
-    "marquee-type": "popular events"
+    "marquee-type": "Popular events"
   }
 }

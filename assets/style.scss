@@ -130,6 +130,13 @@
   .m-type > div{
     padding-top: 6px;
     padding-bottom: 6px;
+    background-color: #54A3FD;
+
+    &:lang(en-US){
+      padding-top: 3px;
+      padding-bottom: 3px;
+      max-width: 75px;
+    }
   }
   .m-type,.m-type i{
     font-size: 0.6875rem;
@@ -137,12 +144,43 @@
   }
   .m-type i{
     transform: translateY(-2px);
+    margin-right: 5px;
   }
 }
 
+
+.m-login-box{
+  .m-btn{
+    font-size: 12px !important;
+    @media #{map-get($display-breakpoints, 'sm-and-up')} {
+      font-size: 14px !important;
+    }
+  }
+
+}
+
 .m-index-quick-link{
+  button{
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 13px;
+  }
+  &:lang(en-US){
+    @media only screen and (max-width: 360px) {
+      font-size: 12px;
+
+      button{
+        padding-right: 1px !important;
+        padding-left: 1px !important;
+      }
+    }
+  }
+
   .pic{
     height: 35px;
+    @media only screen and (max-width: 360px) {
+      height: 30px;
+    }
     img{
       margin-bottom: 5px;
     }
